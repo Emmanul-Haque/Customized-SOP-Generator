@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link href="images/favicon_logo.png" rel="icon" />
+
+    <title>Customized SOP Generator</title>
+
+    <!-- External CSS stylesheets -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Font Awesome Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="register-link">
+        <div class="logo">
+          <!-- Company Logo -->
+          <img src="../images/logo.png" alt="logo of Effizient company" />
+
+          <div class="side-details">
+            <!-- Description -->
+            <p>Fill this questionnaire for the student.</p>
+          </div>
+        </div>
+      </div>
+      <!-- SOP Generator Form -->
+      <form class="submit-details-form-container" id="sopFORM">
+        <h2 class="big-heading">Customized SOP Generator</h2>
+        <!-- Social Media Links -->
+        <div class="social-media">
+          <a href="https://www.facebook.com/Effizientinc/"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/effizientinc/"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/effizient-immigration-inc/?originalSubdomain=ca"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+          <div class="stage">
+            <p class="tool-tip">Personal info</p>
+            <p class="stageno stageno-1">1</p>
+          </div>
+          <div class="stage">
+            <p class="tool-tip">Degree & Experience</p>
+            <p class="stageno stageno-2">2</p>
+          </div>
+          <div class="stage">
+            <p class="tool-tip">More about you</p>
+            <p class="stageno stageno-3">3</p>
+          </div>
+          <div class="stage">
+            <p class="tool-tip tool-tip4">English Score</p>
+            <p class="stageno stageno-4">4</p>
+          </div>
+          <div class="stage">
+            <p class="tool-tip tool-tip5">Fees Paid</p>
+            <p class="stageno stageno-5">5</p>
+          </div>
+        </div>
+
+        <!-- Form Content -->
+        <div class="signup-form-content">
+          <!-- Stage 1 Content -->
+          <div class="stage1-content">
+            <!-- First Name and Last Name Fields -->
+            <div class="button-container">
+              <div class="text-fields fname">
+                <!-- Font Awesome Icon for User -->
+                <label for="fname"><i class="fa fa-user"></i></label>
+                <input
+                  type="text"
+                  name="fname"
+                  id="fname"
+                  placeholder="Enter your first name"
+                  required
+                />
+              </div>
+
+              <div class="text-fields lname">
+                <label for="lname"><i class="fa fa-user"></i></label>
+
+                <input
+                  type="text"
+                  name="lname"
+                  id="lname"
+                  placeholder="Enter your last name"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="text-fields email">
+              <label for="email"><i class="fa fa-envelope"></i></label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+
+            <!-- Date of Birth Field -->
+            <div class="text-fields dob">
+              <input type="date" name="dob" id="dob" required />
+            </div>
+
+            <!-- Next Button for Stage 1 to go stage2 -->
+            <div class="pagination-btns">
+              <input type="button" value="Next" class="nextPage stagebtn1b" />
+            </div>
+          </div>
+
+          <!-- Stage 2 Content (Hidden) -->
+          <div class="stage2-content hidden">
+            <!-- Buttons and input fields for Stage 2 -->
+            <div class="button-container">
+              <!-- Dropdown for Highest Level of Education -->
+              <div class="dropdown">
+                <div class="btn-details">
+                  <span class="selected" id="deg"
+                    >Highest Level of Education
+                  </span>
+                  <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                  <li>Grade 12</li>
+                  <li>Diploma</li>
+                  <li>Bachelors Degree</li>
+                  <li>Masters Degree</li>
+                  <li>PhD</li>
+                </ul>
+              </div>
+
+              <!-- Institute Name Field -->
+              <div class="text-fields iName">
+                <input
+                  type="text"
+                  id="iName"
+                  placeholder="Institute Name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="button-container">
+              <!-- Specialization Field -->
+              <div class="text-fields specialization">
+                <input
+                  type="text"
+                  id="sName"
+                  placeholder="Specialization"
+                  required
+                />
+              </div>
+
+              <!-- Work Experience Field -->
+              <div class="text-fields wExp">
+                <textarea
+                  class=""
+                  type="text"
+                  id="Exp"
+                  placeholder="Write None if no work experience. Provide the following details if yes: 
+                   1. Job Title 
+                   2. Company Name 
+                   3.Job duties"
+                  cols="50"
+                  rows="6"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- Previous and Next Buttons for Stage 2 -->
+            <div class="pagination-btns">
+              <input
+                type="button"
+                value="Previous"
+                class="previousPage stagebtn2a"
+              />
+              <input type="button" value="Next" class="nextPage stagebtn2b" />
+            </div>
+          </div>
+
+          <!-- Stage 3 Content (Hidden) -->
+          <div class="stage3-content hidden">
+            <!-- Buttons and input fields for Stage 3 -->
+            <div class="button-container">
+              <!-- Name of Canadian Institute Field -->
+              <div class="text-fields cInstiName">
+                <input
+                  type="text"
+                  name="about"
+                  id="cIName"
+                  placeholder="Name of Canadian Institute"
+                  required
+                />
+              </div>
+
+              <!-- Applying Country Field -->
+              <div class="text-fields appCountry">
+                <input
+                  type="text"
+                  name="about"
+                  id="appCoun"
+                  placeholder="Applying Country"
+                  required
+                />
+              </div>
+            </div>
+            <!-- Program of Study and Future Goals Fields -->
+            <div class="button-container">
+              <div class="text-fields pos">
+                <input
+                  type="text"
+                  name="about"
+                  id="pOS"
+                  placeholder="Program of Study in Canada"
+                  required
+                />
+              </div>
+
+              <!-- Future Goals Field -->
+              <div class="text-fields goal">
+                <input
+                  type="text"
+                  name="about"
+                  id="futGoals"
+                  placeholder="Future Goals"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Previous and Next Buttons for Stage 3 -->
+            <div class="pagination-btns">
+              <input
+                type="button"
+                value="Previous"
+                class="previousPage stagebtn3a"
+              />
+              <input type="button" value="Next" class="nextPage stagebtn3b" />
+            </div>
+          </div>
+
+          <!-- Stage 4 Content (Hidden) -->
+          <div class="stage4-content hidden">
+            <!-- Buttons and input fields for Stage 4 -->
+            <div class="button-container">
+              <!-- Listening and Reading Fields -->
+              <div class="text-fields listen">
+                <input
+                  type="text"
+                  id="Listen"
+                  placeholder="Listening "
+                  required
+                />
+              </div>
+
+              <div class="text-fields read">
+                <input type="text" id="read" placeholder="Reading" required />
+              </div>
+            </div>
+            <div class="button-container">
+              <!-- Speaking and Writing Fields -->
+              <div class="text-fields speak">
+                <input type="text" id="speak" placeholder="Speaking" required />
+              </div>
+
+              <div class="text-fields write">
+                <input type="text" id="write" placeholder="Writing" required />
+              </div>
+            </div>
+
+            <!-- Previous and Next Buttons for Stage 4 -->
+            <div class="pagination-btns">
+              <input
+                type="button"
+                value="Previous"
+                class="previousPage stagebtn4a"
+              />
+              <input
+                type="button"
+                value="Next"
+                class="nextPage stagebtn4b"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Stage 5 Content (Hidden) -->
+          <div class="stage5-content hidden">
+            <!-- Buttons and input fields for Stage 5 -->
+            <div class="button-container">
+              <!-- Buttons and input fields for Stage 5 -->
+              <div class="radiobtn">
+                <span class="radioQuestion1">First year tuition : </span>
+                <label for="tuitionRadioY" class="radio">
+                  <input
+                    type="radio"
+                    name="tuition_fee"
+                    id="tuitionRadioY"
+                    class="radio__input"
+                  />
+                  <div class="radio__radio"></div>
+                  Yes
+                </label>
+                <label for="tuitionRadioN" class="radio">
+                  <input
+                    type="radio"
+                    name="tuition_fee"
+                    id="tuitionRadioN"
+                    class="radio__input"
+                  />
+                  <div class="radio__radio"></div>
+                  No
+                </label>
+              </div>
+
+              <!-- Tuition Fee Amount Field -->
+              <div class="text-fields tuifee">
+                <label for="tuifee"
+                  ><i class="fa fa-indian-rupee-sign"></i
+                ></label>
+                <input
+                  type="text"
+                  name="tuition_fee"
+                  id="tuitionFee"
+                  placeholder="Amount of tuition Fee"
+                  required
+                />
+              </div>
+            </div>
+            <div class="button-container">
+              <!-- Radio buttons for GIC -->
+              <div class="radiobtn">
+                <span class="radioQuestion2">Did you do a GIC : </span>
+                <label for="gicY" class="radio">
+                  <input
+                    type="radio"
+                    name="gic_fee"
+                    id="gicY"
+                    class="radio__input"
+                  />
+                  <div class="radio__radio"></div>
+                  Yes
+                </label>
+                <label for="gicN" class="radio">
+                  <input
+                    type="radio"
+                    name="gic_fee"
+                    id="gicN"
+                    class="radio__input"
+                  />
+                  <div class="radio__radio"></div>
+                  No
+                </label>
+              </div>
+
+              <!-- GIC Amount Field -->
+              <div class="text-fields gicfee">
+                <label for="tuifee"
+                  ><i class="fa fa-indian-rupee-sign"></i
+                ></label>
+
+                <input
+                  type="text"
+                  id="gic"
+                  placeholder="Amount for GIC"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Previous and Submit Buttons for Stage 5 -->
+            <div class="pagination-btns">
+              <input
+                type="button"
+                value="Previous"
+                class="previousPage stagebtn5a"
+              />
+              <input type="button" value="Submit" class="nextPage submit" />
+            </div>
+          </div>
+        </div>
+      </form>
+      <!-- Popup for Submission Confirmation -->
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="popup-close" onclick="closePopup()">&times;</span>
+          <p>
+            Thank you, your details are submitted. <br />
+            Please check your inbox or spam <br />
+            folder for your SOP details.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <!-- JavaScript Files -->
+  <script src="./script.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+</html>

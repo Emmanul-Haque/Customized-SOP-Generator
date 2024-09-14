@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Template</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #696cff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #f2f2f2;
+        background-color: #696cff;
+        text-align: center;
+      }
+
+      p,
+      li {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #696cff;
+      }
+
+      .innerContainer {
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Your SOP Details</h1>
+      <div class="innerContainer">
+        <p>Email: ${document.getElementById("email").value}</p>
+        <p>
+          Name: ${document.getElementById("fname").value}
+          ${document.getElementById("lname").value}
+        </p>
+        <p>Age: ${calcAge()}</p>
+        <p>
+          Highest Level of Education:
+          ${document.getElementById("deg").innerText}
+        </p>
+        <p>Institute Name: ${document.getElementById("iName").value}</p>
+        <p>Specification: ${document.getElementById("sName").value}</p>
+        <p>Work Experience: ${document.getElementById("Exp").value}</p>
+        <p>
+          Institute you get admitted to in Canada:
+          ${document.getElementById("cIName").value}
+        </p>
+        <p>
+          Your program of study in Canada:
+          ${document.getElementById("pOS").value}
+        </p>
+        <p>Country you are from: ${document.getElementById("appCoun").value}</p>
+        <p>Future goals: ${document.getElementById("futGoals").value}</p>
+        <p>English Scores:</p>
+        <ul>
+          <li>Listening: ${document.getElementById("Listen").value}</li>
+          <li>Reading: ${document.getElementById("read").value}</li>
+          <li>Speaking: ${document.getElementById("speak").value}</li>
+          <li>Writing: ${document.getElementById("write").value}</li>
+        </ul>
+        <p>
+          Paid your first year tuition fee: ${getCheckedRadioBtn(tuitionRadioY,
+          tuitionRadioN)}
+        </p>
+        <p>
+          Tuition fee you paid: ${document.getElementById("tuitionFee").value}
+        </p>
+        <p>Do you do a GIC: ${getCheckedRadioBtn(gicY, gicN)}</p>
+        <p>Amount paid for GIC: ${document.getElementById("gic").value}</p>
+      </div>
+    </div>
+  </body>
+</html>
